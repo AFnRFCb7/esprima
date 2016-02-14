@@ -73,6 +73,9 @@ export class Parser {
     constructor(code: string, options: any = {}, delegate) {
         console.log("LOOK");
         console.log(JSON.stringify(options));
+        console.log((typeof options.whitespace === 'boolean'));
+        console.log(options.whitespace);
+        console.log((typeof options.whitespace === 'boolean') && options.whitespace);
         this.config = {
             range: (typeof options.range === 'boolean') && options.range,
             loc: (typeof options.loc === 'boolean') && options.loc,
