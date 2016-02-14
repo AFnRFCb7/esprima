@@ -71,6 +71,8 @@ export class Parser {
     lastMarker: Marker;
 
     constructor(code: string, options: any = {}, delegate) {
+        console.log("LOOK");
+        console.log(JSON.stringify(options));
         this.config = {
             range: (typeof options.range === 'boolean') && options.range,
             loc: (typeof options.loc === 'boolean') && options.loc,
