@@ -61,7 +61,7 @@ export function parse(code, options, delegate) {
     if (parser.config.tolerant) {
         ast.errors = parser.errorHandler.errors;
     }
-    if (parser.config.whiteSpace) {
+    if (parser.config.whitespace) {
         ast.whiteSpaces = [{
             type: 'WhiteSpace',
             value: ' '
