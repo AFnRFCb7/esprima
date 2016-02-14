@@ -151,6 +151,11 @@ describe('esprima.parse', function () {
         assert.ifError(ast.tokens);
     });
 
+    it('should exclude whitespaces by default', function () {
+        var ast = esprima.parse('42 // answer');
+        assert.ifError(ast.whitespaces);
+    });
+
     it('should include index-based location for the nodes when specified', function () {
         var ast = esprima.parse('answer = 42', { range: true });
         assert.deepEqual(ast.range, [0, 11]);
