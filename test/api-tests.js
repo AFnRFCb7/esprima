@@ -235,6 +235,11 @@ describe('esprima.parse', function () {
         assert.ifError(ast.tokens[0].range);
     });
 
+    it('should include the list of whitespaces when specified', function () {
+        var ast = esprima.parse('42 // answer', { whitespace: true });
+        assert.deepEqual(ast.whitespaces.length, 1);
+        assert.deepEqual(ast.whitespaces[0], { type: 'WhiteSpace', value: ' ' });
+    });
 });
 
 describe('esprima.parse delegate', function () {
