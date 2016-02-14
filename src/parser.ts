@@ -15,7 +15,7 @@ interface Config {
     tokens: boolean;
     comment: boolean;
     tolerant: boolean;
-    whiteSpace: boolean;
+    whitespace: boolean;
 }
 
 interface Context {
@@ -78,7 +78,7 @@ export class Parser {
             tokens: (typeof options.tokens === 'boolean') && options.tokens,
             comment: (typeof options.comment === 'boolean') && options.comment,
             tolerant: (typeof options.tolerant === 'boolean') && options.tolerant,
-            whiteSpace: (typeof options.whitespace === 'boolean') && options.whitespace
+            whitespace: (typeof options.whitespace === 'boolean') && options.whitespace
         };
         if (this.config.loc && options.source && options.source !== null) {
             this.config.source = String(options.source);
