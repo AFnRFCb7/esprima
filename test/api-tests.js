@@ -153,7 +153,7 @@ describe('esprima.parse', function () {
 
     it('should exclude whitespaces by default', function () {
         var ast = esprima.parse('42 // answer');
-        assert.ifError(ast.whitespaces);
+        assert.ifError(ast.whiteSpaces);
     });
 
     it('should include index-based location for the nodes when specified', function () {
@@ -236,9 +236,9 @@ describe('esprima.parse', function () {
     });
 
     it('should include the list of whitespaces when specified', function () {
-        var ast = esprima.parse('42 // answer', { whitespace: true });
-        assert.deepEqual(ast.whitespaces.length, 1);
-        assert.deepEqual(ast.whitespaces[0], { type: 'WhiteSpace', value: ' ' });
+        var ast = esprima.parse('42 // answer', { whiteSpace: true });
+        assert.deepEqual(ast.whiteSpaces.length, 1);
+        assert.deepEqual(ast.whiteSpaces[0], { type: 'WhiteSpace', value: ' ' });
     });
 });
 
